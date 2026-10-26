@@ -4,7 +4,10 @@
 
 @theme {
   --font-roboto: "Roboto", sans-serif; 
+
 }
+
+@plugin "tailwindcss-animated";
 
 /* :root {
   --text: #6b6375;

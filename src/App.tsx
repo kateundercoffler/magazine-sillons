@@ -1,14 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import titreMagazine from "./assets/titre_magazine.png";
 import "./App.css";
 import Navigation from "./Navigation";
 import Articles from "./Articles";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <section id="center">

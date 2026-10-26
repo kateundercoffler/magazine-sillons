@@ -1,4 +1,3 @@
-import React from "react";
 import type { CardData } from "./ArticleCard";
 import ArticleCard from "./ArticleCard";
 
