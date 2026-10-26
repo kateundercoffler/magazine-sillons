@@ -3,8 +3,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
-
+  --font-sans: "Noto sans", sans-serif; 
+  
 }
 
 @plugin "tailwindcss-animated";
