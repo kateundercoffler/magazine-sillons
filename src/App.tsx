@@ -25,6 +25,15 @@ function App() {
         <Navigation />
         <div>
           <img src="/src/assets/images/image-hero_2880.jpg" alt="placeholder" />
+          <div className="grid grid-cols-1 top-10/12 right-0 absolute text-white">
+            <div className="font-serif text-3xl">Lenteur sans filtre</div>
+            <div className="font-sans font-light text-base">
+              La magie de vivre lentement sans influence
+              <div>
+                <li className="list-none">Lire notre dossier spécial</li>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <main className="mx-auto mb-24 max-w-360 px-5">
