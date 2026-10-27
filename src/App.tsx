@@ -23,7 +23,7 @@ function App() {
           <img src="/src/assets/images/image-hero_2880.jpg" alt="placeholder" />
         </div>
       </header>
-      <main className="mx-auto max-w-360 px-5">
+      <main className="mx-auto mb-24 max-w-360 px-5">
         <EnteteNumero />
         <section id="articles">
           <Articles />

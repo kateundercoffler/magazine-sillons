@@ -24,10 +24,10 @@ export default function ArticleCard({ cardData }: Props) {
         />
       </figure>
       <div className="card-body place-self-start">
-        <h2 className="card-title font-normal tracking-wide text-lg">
+        <h2 className="card-title pt-5 font-normal tracking-widest text-lg">
           {cardData.title}
         </h2>
-        <p>{cardData.description}</p>
+        <p className="font-light pt-3 text-lg">{cardData.description}</p>
       </div>
     </div>
   );
