@@ -28,14 +28,14 @@ export default () => (
   <nav className="right-0 top-0 absolute p-5">
     <Menu.Root direction="bottom" anchor="end">
       <Menu.Container
-        buttonSize={40}
+        buttonSize={90}
         menuWidth={400}
         menuRadius={12}
         buttonRadius={0}
-        className="bg-white shadow-lg ring-1 ring-black/5"
+        className="shadow-none!"
       >
         <Menu.Trigger className="rounded-none">
-          <div className="flex h-10 w-10 items-center justify-center">Menu</div>
+          <img src="/menu-closed.svg" alt="" />
         </Menu.Trigger>
         <Menu.Content className="p-2">
           {navLinks.map((link, index) => (
