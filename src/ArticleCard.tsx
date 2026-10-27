@@ -14,12 +14,19 @@ export type CardData = {
 
 export default function ArticleCard({ cardData }: Props) {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center max-w-83.5">
       <figure>
-        <img src={cardData.image.url} alt={cardData.image.alt} />
+        <img
+          src={cardData.image.url}
+          alt={cardData.image.alt}
+          width={334}
+          height={400}
+        />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">{cardData.title}</h2>
+      <div className="card-body place-self-start">
+        <h2 className="card-title font-normal tracking-wide text-lg">
+          {cardData.title}
+        </h2>
         <p>{cardData.description}</p>
       </div>
     </div>

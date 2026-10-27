@@ -2,11 +2,12 @@ import titreMagazine from "./assets/titre_magazine.png";
 import "./App.css";
 import Navigation from "./Navigation";
 import Articles from "./Articles";
+import EnteteNumero from "./EnteteNumero";
 
 function App() {
   return (
     <>
-      <section id="center">
+      <header id="center">
         <div className="titreMagazine">
           <img
             src={titreMagazine}
@@ -19,13 +20,15 @@ function App() {
         <Navigation />
         <div>
           <h1>Hello</h1>
-          <img src="https://placehold.co/1440x648" alt="placeholder" />
+          <img src="/src/assets/images/image-hero_2880.jpg" alt="placeholder" />
         </div>
-      </section>
-
-      <section id="articles">
-        <Articles />
-      </section>
+      </header>
+      <main className="mx-auto max-w-360 px-5">
+        <EnteteNumero />
+        <section id="articles">
+          <Articles />
+        </section>
+      </main>
     </>
   );
 }
