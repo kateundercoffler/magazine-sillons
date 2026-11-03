@@ -39,7 +39,7 @@ function App() {
               <div>
                 <ul>
                   <li className="list-none pt-5 hover:font-medium hover:underline underline-offset-4 transition-all duration-300">
-                    <a href="#">Lire notre dossier spécial</a>
+                    <link href="#">Lire notre dossier spécial</link>
                   </li>
                 </ul>
               </div>
