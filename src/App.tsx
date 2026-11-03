@@ -7,6 +7,7 @@ import EnteteNumero from "./EnteteNumero";
 import Footer from "./Footer";
 import Entrevue from "./Entrevue";
 import ScrollToTopButton from "./ScrollToTop";
+import { Link } from "react-router-dom";
 // import Dossier from "./Dossier";
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
               <div>
                 <ul>
                   <li className="list-none pt-5 hover:font-medium hover:underline underline-offset-4 transition-all duration-300">
-                    <link href="#">Lire notre dossier spécial</link>
+                    <Link to="/dossier">Lire notre dossier spécial</Link>
                   </li>
                 </ul>
               </div>
