@@ -62,7 +62,7 @@ export default function Navigation() {
               className={`transition-opacity duration-100 ${open ? "opacity-0" : "opacity-100"}`}
             />
           </Menu.Trigger>
-          <Menu.Content className="pb-2 pl-2 pr-[33px] pt-[84px]">
+          <Menu.Content className="pb-2 pl-2 pr-8.25 pt-21">
             {navLinks.map((link, index) => (
               <Menu.Item
                 key={index}
@@ -80,7 +80,7 @@ export default function Navigation() {
           type="button"
           aria-label="Fermer le menu"
           onClick={() => setOpen(false)}
-          className="absolute right-5 top-5 z-[60] flex h-[90px] w-[90px] cursor-pointer items-center justify-center"
+          className="absolute right-5 top-5 z-60 flex h-22.5 w-22.5 cursor-pointer items-center justify-center"
         >
           <motion.img
             src="/menu-Xmark.svg"
