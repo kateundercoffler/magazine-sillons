@@ -6,7 +6,7 @@ type Props = {};
 const articles: CardData[] = [
   {
     title: "Avant l'éveil du monde",
-    description: "This is the content of Article 1.",
+    description: "L'heure avant que le monde se reveille, il existe la magie",
     image: {
       url: "/src/assets/images/thumbnail-eveil_668.jpg",
       alt: "Placeholder image for Article 1",
@@ -14,7 +14,7 @@ const articles: CardData[] = [
   },
   {
     title: "Dix minutes à soi",
-    description: "This is the content of Article 2.",
+    description: "Nos astuces pour prolonger votre temps à matin",
     image: {
       url: "/src/assets/images/thumbnail-dix-min_668.jpg",
       alt: "Placeholder image for Article 2",
@@ -22,7 +22,8 @@ const articles: CardData[] = [
   },
   {
     title: "Lenteur sans filtre",
-    description: "This is the content of Article 3.",
+    description:
+      "Si la lenteur matinale n'avait rien à voir avec l'esthétique des réseaux?",
     image: {
       url: "/src/assets/images/thumbnail-lenteur_668.jpg",
       alt: "Placeholder image for Article 3",
@@ -30,7 +31,7 @@ const articles: CardData[] = [
   },
   {
     title: "Apprivoiser le matin",
-    description: "This is the content of Article 4.",
+    description: "Reprendre le matin, ça vaut la peine",
     image: {
       url: "/src/assets/images/thumbnail-apprivoiser_668.jpg",
       alt: "Placeholder image for Article 4",

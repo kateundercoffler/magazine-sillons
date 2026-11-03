@@ -66,7 +66,7 @@ export default function Navigation() {
             {navLinks.map((link, index) => (
               <Menu.Item
                 key={index}
-                className="whitespace-nowrap py-0.5 text-right font-light uppercase transition-all text-primary  hover:text-primary hover:font-bold"
+                className="whitespace-nowrap py-0.5 text-right font-light uppercase transition-all font-sans hover:font-sans hover:font-bold hover:text-linksActive"
                 onSelect={() => {}}
               >
                 {link.titre}
