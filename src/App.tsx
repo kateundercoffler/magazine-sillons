@@ -7,6 +7,7 @@ import EnteteNumero from "./EnteteNumero";
 import Footer from "./Footer";
 import Entrevue from "./Entrevue";
 import ScrollToTopButton from "./ScrollToTop";
+// import Dossier from "./Dossier";
 
 function App() {
   return (
