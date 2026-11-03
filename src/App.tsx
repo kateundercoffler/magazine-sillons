@@ -6,6 +6,7 @@ import Articles from "./Articles";
 import EnteteNumero from "./EnteteNumero";
 import Footer from "./Footer";
 import Entrevue from "./Entrevue";
+import ScrollToTopButton from "./ScrollToTop";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           </section>
         </motion.div>
         <Entrevue />
+        <ScrollToTopButton />
       </main>
       <footer>
         <Footer />

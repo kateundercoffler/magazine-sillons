@@ -8,6 +8,7 @@
   --font-serif: "Mixta-sharp", serif;
   --color-linksActive: #ba7e00;
   --color-buttonHover: #666b83;
+  --color-toTopHover: #CC7771;
 }
 
 @plugin "tailwindcss-animated";
