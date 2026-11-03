@@ -1,19 +1,28 @@
 type Props = {};
 
+const links = [
+  "Tous nos numéros",
+  "Magasiner",
+  "À propos de nous",
+  "Nous joindre",
+  "Politiques et confidentialité",
+];
+
 export default function Footer({}: Props) {
   return (
-    <div className="flex flex-col justify-center items-center text-lg text-black font-light tracking-widest pt-5 border-t-2 border-t-gray-500 mt-32">
+    <div className="flex flex-col justify-center items-center text-lg text-black font-light tracking-widest pt-5 border-t-2 border-t-gray-500 mt-52">
       <div className="flex flex-col justify-center items-center gap-5 w-full">
         <p className="text-4xl font-serif">Abonnez-vous au magazine</p>
         <span className="flex justify-center items-center font-serif text-4xl">
           Sillons
         </span>
         <img
+          className="border-0 rounded-md pb-4"
           src="/src/assets/images/couverture.png"
           alt="fleurs mauves dans un champs"
           width={300}
         ></img>
-        <button className="border-2 rounded-md border-black p-1.5 hover:bg-black hover:transition hover:delay-200 hover:text-white">
+        <button className="border-2 rounded-md border-black p-1.5 hover:bg-buttonHover transition-all duration-300 hover:text-white hover:font-medium">
           Apprendre plus
         </button>
         <div className="grid grid-cols-1 md:grid-cols-2 font-sans text-sm pt-5 mt-20 gap-5 w-full px-5 pb-16">
@@ -38,13 +47,13 @@ export default function Footer({}: Props) {
               <div>© 2026 Kate Undercoffler | Tous droits réservés.</div>
             </div>
           </div>
-          <div className="md:justify-self-end max-w-sm flex flex-col gap-1">
-            <div>Tous nos numéros</div>
-            <div>Magasiner</div>
-            <div>À propos de nous</div>
-            <div>Nous joindre</div>
-            <div>Politiques et confidentialité</div>
-          </div>
+          <ul className="md:justify-self-end max-w-sm flex flex-col gap-1.5 *:transition-all *:duration-300">
+            {links.map((link) => (
+              <li key={link} className="hover:text-linksActive">
+                <a href="">{link}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="flex justify-center gap-5 w-full pt-5 pb-5">

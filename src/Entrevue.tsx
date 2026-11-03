@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
+
 type Props = {};
 
 function Entrevue({}: Props) {
   return (
-    <div className="mt-44 grid grid-cols-1 gap-5 md:grid-cols-2 justify-center justify-items-center items-center">
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="mt-44 grid grid-cols-1 gap-5 md:grid-cols-2 justify-center justify-items-center items-center"
+    >
       <img
         src="/src/assets/images/thumbnail-entrevue_1344.jpg"
         width={672}
@@ -20,7 +28,7 @@ function Entrevue({}: Props) {
           ses matins
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
