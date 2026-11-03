@@ -10,7 +10,11 @@ function Entrevue({}: Props) {
         alt="femme avec cheveux brun en pyjamas"
       />
       <div className="flex flex-col gap-5">
-        <div className="text-4xl font-serif">Trouver sa routine matinale</div>
+        <a href="">
+          <div className="text-4xl font-serif hover:text-linksActive">
+            Trouver sa routine matinale
+          </div>
+        </a>
         <div className="text-lg tracking-widest font-light font-sans">
           Comment Zoë Elizabeth a trouvé une nouvelle façon de vivre lentement
           ses matins

@@ -16,18 +16,23 @@ export default function ArticleCard({ cardData }: Props) {
   return (
     <div className="flex flex-col justify-center items-center max-w-83.5">
       <figure>
-        <img
-          src={cardData.image.url}
-          alt={cardData.image.alt}
-          width={334}
-          height={400}
-        />
+        <a href="#">
+          <img
+            className="hover:shadow-xl transition-all duration-300 hover:scale-103"
+            src={cardData.image.url}
+            alt={cardData.image.alt}
+            width={334}
+            height={400}
+          />
+        </a>
       </figure>
       <div className="card-body place-self-start">
-        <h2 className="card-title pt-5 font-normal tracking-widest text-lg">
-          {cardData.title}
-        </h2>
-        <p className="font-light pt-3 text-lg">{cardData.description}</p>
+        <a className="hover:text-linksActive" href="">
+          <h2 className="card-title pt-5 font-normal tracking-widest text-lg">
+            {cardData.title}
+          </h2>
+          <p className="font-light pt-3 text-lg">{cardData.description}</p>
+        </a>
       </div>
     </div>
   );
