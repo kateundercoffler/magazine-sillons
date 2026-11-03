@@ -19,11 +19,11 @@ function Entrevue({}: Props) {
       />
       <div className="flex flex-col gap-5">
         <a href="">
-          <div className="text-4xl font-serif hover:text-linksActive">
+          <div className="lg:text-4xl text-xl font-serif hover:text-linksActive">
             Trouver sa routine matinale
           </div>
         </a>
-        <div className="text-lg tracking-widest font-light font-sans">
+        <div className="lg:text-lg text-md tracking-widest font-light font-sans">
           Comment Zoë Elizabeth a trouvé une nouvelle façon de vivre lentement
           ses matins
         </div>

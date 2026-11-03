@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <header id="center">
-        <h1 className="font-sans text-lg font-light uppercase mt-14">
+        <h1 className="font-sans lg:text-lg sm:text-md font-light uppercase mt-14">
           Magazine
         </h1>
         <div className="titreMagazine">
@@ -26,8 +26,12 @@ function App() {
         </div>
         <Navigation />
         <div>
-          <img src="/src/assets/images/image-hero_2880.jpg" alt="placeholder" />
-          <div className="grid grid-cols-1 top-10/12 right-0 absolute text-white pr-10 gap-2">
+          <img
+            className="sm:object-fill"
+            src="/src/assets/images/image-hero_2880.jpg"
+            alt="placeholder"
+          />
+          <div className="grid grid-cols-1 lg:top-10/12 right-0 md:top-9/12 sm:top-6/12 absolute text-white pr-10 gap-2">
             <div className="font-serif text-3xl">Lenteur sans filtre</div>
             <div className="font-sans font-light text-base">
               La magie de vivre lentement sans influence
@@ -55,6 +59,14 @@ function App() {
           </section>
         </motion.div>
         <Entrevue />
+        <div className="flex justify-center items-center mt-20">
+          <img
+            src="/src/assets/images/illustration.png"
+            alt=""
+            width={500}
+            height={300}
+          />
+        </div>
         <ScrollToTopButton />
       </main>
       <footer>

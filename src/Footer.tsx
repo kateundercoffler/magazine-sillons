@@ -10,9 +10,11 @@ const links = [
 
 export default function Footer({}: Props) {
   return (
-    <div className="flex flex-col justify-center items-center text-lg text-black font-light tracking-widest pt-5 border-t-2 border-t-gray-500 mt-52">
+    <div className="flex flex-col justify-center items-center text-lg text-black font-light tracking-widest pt-5 border-t-2 border-t-gray-500">
       <div className="flex flex-col justify-center items-center gap-5 w-full">
-        <p className="text-4xl font-serif">Abonnez-vous au magazine</p>
+        <p className="text-xl lg:text-4xl font-serif pt-10">
+          Abonnez-vous au magazine
+        </p>
         <span className="flex justify-center items-center font-serif text-4xl">
           Sillons
         </span>
@@ -22,7 +24,7 @@ export default function Footer({}: Props) {
           alt="fleurs mauves dans un champs"
           width={300}
         ></img>
-        <button className="border-2 rounded-md border-black p-1.5 hover:bg-buttonHover transition-all duration-300 hover:text-white hover:font-medium">
+        <button className="lg:text-md border-2 rounded-md p-1.5 hover:bg-buttonHover transition-all duration-300 hover:text-white hover:font-medium">
           Apprendre plus
         </button>
         <div className="grid grid-cols-1 md:grid-cols-2 font-sans text-sm pt-5 mt-20 gap-5 w-full px-5 pb-16">
