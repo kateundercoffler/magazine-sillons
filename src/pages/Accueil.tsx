@@ -1,19 +1,16 @@
-import titreMagazine from "./assets/titre_magazine.png";
+import titreMagazine from "../assets/titre_magazine.png";
 import { motion } from "framer-motion";
-import "./App.css";
-import Navigation from "./Navigation";
-import Articles from "./Articles";
-import EnteteNumero from "./EnteteNumero";
-import Footer from "./Footer";
-import Entrevue from "./Entrevue";
-import ScrollToTopButton from "./ScrollToTop";
+import Articles from "../components/Articles";
+import EnteteNumero from "../components/EnteteNumero";
+import Entrevue from "../components/Entrevue";
 import { Link } from "react-router-dom";
-// import Dossier from "./Dossier";
+import Layout from "../components/Layout";
+//#
 
-function App() {
+function Accueil() {
   return (
-    <>
-      <header id="center">
+    <Layout>
+      <Layout.Header>
         <h1 className="font-sans lg:text-lg sm:text-md font-light uppercase mt-14">
           Magazine
         </h1>
@@ -26,7 +23,6 @@ function App() {
             alt="titre du magazine Sillons"
           />
         </div>
-        <Navigation />
         <div>
           <img
             className="sm:object-fill"
@@ -47,8 +43,8 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
-      <main className="mx-auto mb-24 max-w-360 px-5">
+      </Layout.Header>
+      <Layout.Main>
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,13 +65,9 @@ function App() {
             height={300}
           />
         </div>
-        <ScrollToTopButton />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+      </Layout.Main>
+    </Layout>
   );
 }
 
-export default App;
+export default Accueil;
