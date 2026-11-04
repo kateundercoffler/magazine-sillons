@@ -21,7 +21,9 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Navigation />
       <header id="center">{header}</header>
-      <main className="mx-auto mb-24 max-w-360 px-5">{main}</main>
+      <main className="mx-auto mb-24 h-full min-h-screen max-w-360 px-5">
+        {main}
+      </main>
       <ScrollToTopButton />
       <footer>
         <Footer />

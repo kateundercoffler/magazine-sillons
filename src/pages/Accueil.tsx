@@ -23,13 +23,13 @@ function Accueil() {
             alt="titre du magazine Sillons"
           />
         </div>
-        <div>
+        <div className="relative">
           <img
             className="sm:object-fill"
             src="/src/assets/images/image-hero_2880.jpg"
             alt="placeholder"
           />
-          <div className="grid grid-cols-1 lg:top-10/12 right-0 md:top-9/12 sm:top-6/12 absolute text-white pr-10 gap-2">
+          <div className="grid grid-cols-1 bottom-8 right-1 absolute text-white pr-10 gap-2">
             <div className="font-serif text-3xl">Lenteur sans filtre</div>
             <div className="font-sans font-light text-base">
               La magie de vivre lentement sans influence
