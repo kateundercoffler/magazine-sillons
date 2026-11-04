@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Props = {};
 
 const links = [
@@ -24,9 +26,12 @@ export default function Footer({}: Props) {
           alt="fleurs mauves dans un champs"
           width={300}
         ></img>
-        <button className="lg:text-md border-2 rounded-md p-1.5 hover:bg-buttonHover transition-all duration-300 hover:text-white hover:font-medium">
+        <Link
+          to="/"
+          className="border border-current px-5 py-2 font-sans font-light text-sm uppercase tracking-widest transition-all duration-300 hover:bg-buttonHover hover:text-buttonTextHover hover:border-buttonHover"
+        >
           Apprendre plus
-        </button>
+        </Link>
         <div className="grid grid-cols-1 md:grid-cols-2 font-sans text-sm pt-5 mt-20 gap-5 w-full px-5 pb-16">
           <div className="max-w-md flex flex-col gap-1">
             <div className="mb-5 flex flex-col gap-3.5">
