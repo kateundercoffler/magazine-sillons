@@ -15,13 +15,15 @@ function Accueil() {
           Magazine
         </h1>
         <div className="titreMagazine">
-          <img
-            src={titreMagazine}
-            className="base"
-            width="643"
-            height="250"
-            alt="titre du magazine Sillons"
-          />
+          <Link to="/">
+            <img
+              src={titreMagazine}
+              className="base"
+              width="643"
+              height="250"
+              alt="titre du magazine Sillons, retour à l'accueil"
+            />
+          </Link>
         </div>
         <div className="relative">
           <img

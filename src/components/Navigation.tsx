@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Menu } from "bloom-menu";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const navLinks = [
   {
     titre: "Accueil",
     href: "/",
+  },
+  {
+    titre: "Dossier",
+    href: "/dossier",
   },
   {
     titre: "Nos numéros",
@@ -28,6 +33,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="right-0 top-0 absolute p-5">
@@ -67,7 +73,12 @@ export default function Navigation() {
               <Menu.Item
                 key={index}
                 className="whitespace-nowrap py-0.5 text-right font-light uppercase transition-all font-sans hover:font-sans hover:font-bold hover:text-linksActive"
-                onSelect={() => {}}
+                onSelect={() => {
+                  if (link.href.startsWith("/")) {
+                    navigate(link.href);
+                    setOpen(false);
+                  }
+                }}
               >
                 {link.titre}
               </Menu.Item>

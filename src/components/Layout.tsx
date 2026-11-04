@@ -1,5 +1,10 @@
 import "./Layout.css";
-import { Children, isValidElement, type ReactNode } from "react";
+import {
+  Children,
+  isValidElement,
+  useLayoutEffect,
+  type ReactNode,
+} from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import ScrollToTopButton from "./ScrollToTop";
@@ -13,6 +18,11 @@ function Main({ children }: { children: ReactNode }) {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
+  // Layout remounts with each page, so this starts every page at the top.
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const slots = Children.toArray(children).filter(isValidElement);
   const header = slots.find((s) => s.type === Header);
   const main = slots.find((s) => s.type === Main);

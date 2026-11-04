@@ -22,6 +22,7 @@ const articles: CardData[] = [
   },
   {
     title: "Lenteur sans filtre",
+    href: "/dossier",
     description:
       "Si la lenteur matinale n'avait rien à voir avec l'esthétique des réseaux?",
     image: {
