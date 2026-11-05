@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Menu } from "bloom-menu";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -31,12 +31,26 @@ const navLinks = [
   },
 ];
 
+const mobileQuery = "(max-width: 767px)";
+
+function useIsMobile() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia(mobileQuery);
+      query.addEventListener("change", onChange);
+      return () => query.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia(mobileQuery).matches,
+  );
+}
+
 export default function Navigation() {
+  const isMobile = useIsMobile();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <nav className="right-0 top-0 absolute p-5">
+    <nav className="absolute right-0 top-0 z-50 p-5">
       <Menu.Root
         open={open}
         onOpenChange={setOpen}
@@ -48,18 +62,19 @@ export default function Navigation() {
       >
         <Menu.Container
           buttonSize={{ width: 150, height: 90 }}
-          menuWidth={150}
+          menuWidth={isMobile ? 190 : 150}
           menuRadius={4}
-          buttonRadius={0}
-          className="shadow-none!"
+          buttonRadius={isMobile ? 4 : 0}
+          className={isMobile && open ? "shadow-lg!" : "shadow-none!"}
           style={{
             pointerEvents: open ? "auto" : "none",
             marginTop: open ? -67.5 : 0,
             overflow: "visible",
+            ...(isMobile && open ? { backgroundColor: "white" } : {}),
           }}
         >
           <Menu.Trigger
-            className="rounded-none"
+            className="rounded-[4px] bg-white md:rounded-none md:bg-transparent"
             style={{ left: "auto", width: 90, pointerEvents: "auto" }}
           >
             <img
@@ -72,7 +87,7 @@ export default function Navigation() {
             {navLinks.map((link, index) => (
               <Menu.Item
                 key={index}
-                className="whitespace-nowrap py-0.5 text-right font-light uppercase transition-all font-sans hover:font-sans hover:font-bold hover:text-linksActive"
+                className="whitespace-nowrap py-3 md:py-0.5 text-right font-light uppercase transition-all font-sans hover:font-sans hover:font-bold hover:text-linksActive"
                 onSelect={() => {
                   if (link.href.startsWith("/")) {
                     navigate(link.href);

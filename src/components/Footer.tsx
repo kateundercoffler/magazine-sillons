@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import couverture from "../assets/images/couverture-600.jpg";
 
 type Props = {};
 
@@ -22,7 +23,8 @@ export default function Footer({}: Props) {
         </span>
         <img
           className="border-0 rounded-md pb-4"
-          src="/src/assets/images/couverture.png"
+          src={couverture}
+          loading="lazy"
           alt="fleurs mauves dans un champs"
           width={300}
         ></img>

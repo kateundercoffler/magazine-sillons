@@ -48,6 +48,7 @@ export default function ArticleCard({ cardData }: Props) {
             alt={cardData.image.alt}
             width={334}
             height={400}
+            loading="lazy"
           />
         </CardLink>
       </figure>

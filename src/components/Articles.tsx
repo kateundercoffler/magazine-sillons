@@ -1,5 +1,9 @@
 import type { CardData } from "./ArticleCard";
 import ArticleCard from "./ArticleCard";
+import eveil from "../assets/images/thumbnail-eveil_668.jpg";
+import dixMin from "../assets/images/thumbnail-dix-min_668.jpg";
+import lenteur from "../assets/images/thumbnail-lenteur_668.jpg";
+import apprivoiser from "../assets/images/thumbnail-apprivoiser_668.jpg";
 
 type Props = {};
 
@@ -8,7 +12,7 @@ const articles: CardData[] = [
     title: "Avant l'éveil du monde",
     description: "L'heure avant que le monde se reveille, il existe la magie",
     image: {
-      url: "/src/assets/images/thumbnail-eveil_668.jpg",
+      url: eveil,
       alt: "Placeholder image for Article 1",
     },
   },
@@ -16,7 +20,7 @@ const articles: CardData[] = [
     title: "Dix minutes à soi",
     description: "Nos astuces pour prolonger votre temps à matin",
     image: {
-      url: "/src/assets/images/thumbnail-dix-min_668.jpg",
+      url: dixMin,
       alt: "Placeholder image for Article 2",
     },
   },
@@ -26,7 +30,7 @@ const articles: CardData[] = [
     description:
       "Si la lenteur matinale n'avait rien à voir avec l'esthétique des réseaux?",
     image: {
-      url: "/src/assets/images/thumbnail-lenteur_668.jpg",
+      url: lenteur,
       alt: "Placeholder image for Article 3",
     },
   },
@@ -34,7 +38,7 @@ const articles: CardData[] = [
     title: "Apprivoiser le matin",
     description: "Reprendre le matin, ça vaut la peine",
     image: {
-      url: "/src/assets/images/thumbnail-apprivoiser_668.jpg",
+      url: apprivoiser,
       alt: "Placeholder image for Article 4",
     },
   },

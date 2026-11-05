@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import thumbnailEntrevue from "../assets/images/thumbnail-entrevue_1344.jpg";
 
 type Props = {};
 
@@ -12,7 +13,8 @@ function Entrevue({}: Props) {
       className="mt-44 grid grid-cols-1 gap-5 md:grid-cols-2 justify-center justify-items-center items-center"
     >
       <img
-        src="/src/assets/images/thumbnail-entrevue_1344.jpg"
+        src={thumbnailEntrevue}
+        loading="lazy"
         width={672}
         height={522}
         alt="femme avec cheveux brun en pyjamas"
@@ -23,7 +25,7 @@ function Entrevue({}: Props) {
             Trouver sa routine matinale
           </div>
         </a>
-        <div className="lg:text-lg text-md tracking-widest font-light font-sans">
+        <div className="lg:text-lg text-base tracking-widest font-light font-sans">
           Comment Zoë Elizabeth a trouvé une nouvelle façon de vivre lentement
           ses matins
         </div>

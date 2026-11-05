@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import titreMagazine from "../assets/titre_magazine.png";
-import imageSection01 from "../assets/images/imageSection01.jpg";
-import imageSection02 from "../assets/images/pexels-jill-burrow-6681877.jpg";
+import section01Small from "../assets/images/section01-750.jpg";
+import section01Large from "../assets/images/section01-1500.jpg";
+import section02Small from "../assets/images/section02-750.jpg";
+import section02Large from "../assets/images/section02-1500.jpg";
 
 export default function Dossier() {
   return (
@@ -33,7 +35,14 @@ export default function Dossier() {
       </Layout.Header>
       <Layout.Main>
         <section className="grid grid-cols-1 md:grid-cols-12 gap-x-4 gap-y-8 items-start text-left mx-auto max-w-md md:max-w-none">
-          <img src={imageSection01} className="w-full md:col-span-6" alt="" />
+          <img
+            src={section01Large}
+            srcSet={`${section01Small} 750w, ${section01Large} 1500w`}
+            sizes="(min-width: 768px) 50vw, min(100vw, 448px)"
+            loading="lazy"
+            className="w-full md:col-span-6"
+            alt=""
+          />
           <div className="md:col-start-9 md:col-span-4">
             <h2 className="font-serif text-2xl">
               D'où vient cette envie de ralentir
@@ -66,7 +75,10 @@ export default function Dossier() {
         </section>
         <section className="grid grid-cols-1 md:grid-cols-12 gap-x-4 gap-y-8 items-start text-left mx-auto max-w-md md:max-w-none mt-24 md:mt-40">
           <img
-            src={imageSection02}
+            src={section02Large}
+            srcSet={`${section02Small} 750w, ${section02Large} 1500w`}
+            sizes="(min-width: 768px) 33vw, min(100vw, 448px)"
+            loading="lazy"
             className="w-full order-1 md:order-2 md:col-start-9 md:col-span-4"
             alt=""
           />
